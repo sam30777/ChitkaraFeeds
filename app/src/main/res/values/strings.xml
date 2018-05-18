@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">ChitkaraFeeds</string>
+    <string name="topics">topics</string>
+    <string name="title_name_key">title_name_key</string>
+    <string name="review_list">review_list</string>
+    <string name="atingsOverall">ratingsOverall</string>
+    <string name="rating_vale">rating_value</string>
+    <string name="user_count">user_count</string>
+    <string name="ratings_list">ratings_list</string>
+    <string name="add_ratings">Add Ratings</string>
+    <string name="edit_ratings">Edit Ratings</string>
+    <string name="overall_rating">overAllRating</string>
+</resources>

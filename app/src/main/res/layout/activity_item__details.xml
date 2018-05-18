@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:theme="@style/Custom"
+    android:layout_height="match_parent"
+    tools:context=".Item_Details">
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:id="@+id/appbarLayout"
+        android:fitsSystemWindows="true"
+        android:layout_height="wrap_content">
+        <android.support.design.widget.CollapsingToolbarLayout
+            android:layout_width="match_parent"
+            app:layout_scrollFlags="scroll|exitUntilCollapsed"
+            android:minHeight="72dp"
+            android:id="@+id/collapseToolbar"
+            app:contentScrim="@color/colorPrimary"
+            android:layout_height="200dp">
+            <ImageView
+                android:layout_width="match_parent"
+                android:src="@drawable/fest"
+                android:scaleType="centerCrop"
+                android:id="@+id/title_image_detail"
+                android:layout_height="match_parent" />
+            <android.support.v7.widget.Toolbar
+                android:layout_width="match_parent"
+                android:id="@+id/toolbar"
+                android:minHeight="60dp"
+                app:backgroundTint="@android:color/white"
+                android:backgroundTint="@android:color/white"
+                app:layout_collapseMode="parallax"
+                android:layout_height="60dp">
+
+            </android.support.v7.widget.Toolbar>
+        </android.support.design.widget.CollapsingToolbarLayout>
+    </android.support.design.widget.AppBarLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:id="@+id/linearLayoutAnch"
+        android:background="@color/colorPrimary"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        android:layout_height="60dp">
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="8dp"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_width="wrap_content"
+                android:text="Ratings"
+                android:textColor="@android:color/white"
+                android:layout_height="wrap_content" />
+            <RatingBar
+                android:layout_width="wrap_content"
+                android:id="@+id/rating_Activity"
+                android:layout_marginLeft="8dp"
+                style="?android:attr/ratingBarStyleSmall"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+        <TextView
+            android:layout_width="wrap_content"
+            android:text="Reviews(0)"
+            android:textColor="@android:color/white"
+            android:id="@+id/reviews_count_Details"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            android:layout_height="wrap_content" /></LinearLayout>
+
+
+    <android.support.v7.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:paddingBottom="75dp"
+        android:layout_marginTop="66dp"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        android:id="@+id/review_list_details_recycler"
+        android:layout_height="match_parent"></android.support.v7.widget.RecyclerView>
+       <LinearLayout
+           android:layout_width="match_parent"
+           android:layout_gravity="bottom"
+           android:orientation="horizontal"
+           android:layout_height="48dp">
+           <EditText
+               android:layout_width="0dp"
+               android:layout_weight="3"
+               android:id="@+id/user_review"
+               android:pointerIcon="alias"
+               android:paddingLeft="16dp"
+               android:background="@drawable/border"
+               android:layout_height="match_parent" />
+           <TextView
+               android:layout_width="0dp"
+               android:layout_weight="1"
+               android:text="Add"
+               android:id="@+id/add_review"
+               android:textColor="#212121"
+               android:textSize="20sp"
+               android:gravity="center"
+               android:hint="review"
+               android:background="@color/colorSecondary"
+               android:layout_height="match_parent" />
+       </LinearLayout>
+    <android.support.design.widget.FloatingActionButton
+        android:layout_width="wrap_content"
+        app:layout_anchor="@id/appbarLayout"
+        android:layout_marginRight="16dp"
+        android:id="@+id/addRatings"
+        app:layout_anchorGravity="bottom|right|end"
+        android:src="@drawable/baseline_grade_black_18dp"
+        android:layout_height="wrap_content" />
+</android.support.design.widget.CoordinatorLayout>
